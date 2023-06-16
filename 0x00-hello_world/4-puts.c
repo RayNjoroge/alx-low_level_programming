@@ -1,8 +1,8 @@
 /* include <stdio.h> -standard io header */
 #include <stdio.h>
 /**
- * int main(void) - this is the entry point
- * return(0)-gives a value of 0
+ * main - this is the entry point.
+ * Return: - gives a value of 0.
  */
 int main(void)
 {
