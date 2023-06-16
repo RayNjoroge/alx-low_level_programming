@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	int myArray[] = {sizeof(char), sizeof(int), sizeof(long int), sizeof(long long int), sizeof(float)};
+	int myArray[5] = {char, int, long int, long long int, float};
 	int sizeTypes = sizeof(myArray[0]);
 
 	printf("Size of a char: %d byte(s)\n", myArray[0]);
