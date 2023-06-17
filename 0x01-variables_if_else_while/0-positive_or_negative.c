@@ -7,9 +7,8 @@
 /* betty style doc for function main goes there */
 /**
  * main  - entry point.
- * @n: to hold the value of the random number
  * the srand(time()) - for generating random number
- * printf - prints the value of n.
+ * printf - prints the value
  * the if else statement - to test the conditions
  * Return: - returns 0
  */
@@ -24,15 +23,15 @@ int main(void)
 
 	if (n < 0)
 	{
-		printf("The number is negative\n");
+		printf("%d is negative\n", n);
 	}
 	else if (n > 0)
 	{
-		printf("The number is positive\n");
+		printf("%d is positive\n");
 	}
 	else
 	{
-		printf("The number is zero\n");
+		printf("%d  is zero\n");
 	}
 
 	return (0);
