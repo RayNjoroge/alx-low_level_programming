@@ -8,7 +8,6 @@
 /**
  * main  - entry point.
  * the srand(time()) - for generating random number
- * printf - prints the value
  * the if else statement - to test the conditions
  * Return: - returns 0
  */
@@ -18,8 +17,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-
-	printf("%d\n", n);
 
 	if (n < 0)
 	{
