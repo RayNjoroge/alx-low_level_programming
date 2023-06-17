@@ -11,6 +11,7 @@
 * variable l will carry the value of the last digit of n
 * if...else if...else - to test the conditions
 * printf - to give the required output
+* Exit: - to exit the loop
 * Return: - returns 0
 */
 int main(void)
@@ -31,9 +32,13 @@ int main(void)
 	{
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, l);
 	}
-	else
+	else if (l == 0)
 	{
 		printf("Last digit of %d is %d and is 0\n", n, l);
+	}
+	else
+	{
+		exit(0);
 	}
 	return (0);
 }
