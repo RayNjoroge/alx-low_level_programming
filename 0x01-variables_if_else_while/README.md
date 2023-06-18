@@ -3,3 +3,4 @@ Task - 1 Program will assign a random number to the variable n each time it is e
 Task - 2 A program that prints the alphabet in lowercase, followed by a new line.'\n'
 Task - 3 A program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.'\n'
 Task - 4 A program that prints the alphabet in lowercase, followed by a new line.'\n'
+Task - 5 A program that prints all single digit numbers of base 10 starting from 0, followed by a new line.'\n'
