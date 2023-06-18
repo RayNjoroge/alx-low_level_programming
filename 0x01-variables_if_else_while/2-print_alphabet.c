@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *main function - this is the entry point
+ *main - this is the entry point
  *declare a variable to hold the individual letters of the alphabet
  *for loop - to define the conditions to be checked
  *putchar() - to print the value of the variable(alphabet)
@@ -16,7 +16,6 @@ int main(void)
 	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
 		putchar(alphabet);
-		putchar('\n');
 	}
 
 	return (0);
