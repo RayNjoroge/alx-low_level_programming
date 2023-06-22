@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * times_table
+ * times_table - entry point
  * declare variables
  * for loop to set conditions to be checked for
  * if...else statements to check for more conditions
