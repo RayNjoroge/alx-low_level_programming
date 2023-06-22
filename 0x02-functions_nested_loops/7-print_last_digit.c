@@ -12,13 +12,11 @@ int print_last_digit(int digit)
 {
 	int lst_no_digit;
 
-	if (digit < 0)
+	lst_no_digit = digit % 10;
+
+	if (lst_no_digit < 0)
 	{
-		lst_no_digit = -digit % 10;
-	}
-	else
-	{
-		lst_no_digit = digit % 10;
+		lst_no_digit = lst_no_digit * -1;
 	}
 
 	_putchar(lst_no_digit + '0');
