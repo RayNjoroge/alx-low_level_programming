@@ -15,10 +15,11 @@ int main(void)
 	int PASSWORD_LENGTH = 10;
 
 	srand(time(NULL));
+	int i;
 
 	char pwd[PASSWORD_LENGTH + 1];
 
-	for (int i = 0; i < PASSWORD_LENGTH; i++)
+	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
 		int random_num = rand() % 62;
 
