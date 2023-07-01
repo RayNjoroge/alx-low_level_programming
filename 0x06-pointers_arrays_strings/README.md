@@ -7,3 +7,4 @@ Task - 5 A function that changes all lowercase letters of a string to uppercase.
 Task - 6 A function that capitalizes all words of a string. <br>
 Task - 7 A function that encodes a string into 1337. <br>
 Task - 8 A function that encodes a string using rot13. <br>
+Task - 9 A function that prints an integer. <br>
