@@ -23,8 +23,8 @@ char *cap_string(char *ptr)
 
 		if (ptr[count] == ' ' || ptr[count] == '\t' || ptr[count] == '\n'
 			|| ptr[count] == ',' || ptr[count] == ';' || ptr[count] == '.'
-			|| ptr[count] || ptr[count] == '!' ||  ptr[count] == '?'
-			|| ptr[count] == '"' || ptr[count] == '('
+			|| ptr[count] == '!' ||  ptr[count] == '?'
+			|| ptr[count] == '"' || ptr[count] == '(' || ptr[count] == ','
 			|| ptr[count] == ')' || ptr[count] == '{' || ptr[count] == '}')
 		{
 			if (ptr[count + 1] >= 97 && ptr[count + 1] <= 122)
