@@ -1,46 +1,50 @@
-/*include header file(s) containing necessary dependencies*/
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+#include <string.h>
 
 /**
- * _memset - fills memory with a constant byte
- * @str: - memory to be filled
- * @j: - char to copy
- * @k: - no of times to copy j
- * Return: - returns pointer to str
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
  */
-char *_memset(char *str, char j, unsigned int k)
+void simple_print_buffer(char *buffer, unsigned int size)
 {
 	unsigned int i;
 
-	for (i = 0; i < k; i++)
+	i = 0;
+	while (i < size)
 	{
-		str[i] = j;
+		if (i % 10)
+		{
+			printf(" ");
+		}
+		if (!(i % 10) && i)
+		{
+			printf("\n");
+		}
+		printf("0x%02x", buffer[i]);
+		i++;
 	}
-
-	return (str);
+	printf("\n");
 }
+
 /**
- * _calloc - function that allocates memory
- *	for an array using malloc
- * @nmemb: - number of elements in the array
- * @size: - size of bytes of each element in the array
- * Return: returns ptr to allocated memory
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
+int main(void)
 {
-	char *ptr;
+	char *a;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-
-	ptr = malloc(size * nmemb);
-
-	if (ptr == NULL)
-		return (NULL);
-
-	_memset(ptr, 0, nmemb * size);
-
-	return (ptr);
+	a = _calloc(98, sizeof(char));
+	strcpy(a, "Best");
+	strcpy(a + 4, " School! :)\n");
+	a[97] = '!';
+	simple_print_buffer(a, 98);
+	free(a);
+	return (0);
 }
