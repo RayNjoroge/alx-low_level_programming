@@ -4,6 +4,43 @@
 #include <string.h>
 #include "dog.h"
 
+int _strlen(char *str);
+char *_strcpy(char *dest, char *src);
+
+/**
+ * _strlen - main fn
+ * @str: - string to be checked
+ *
+ * Return: - return 0
+ */
+int _strlen(char *str)
+{
+	int length = 0;
+
+	while (*str++)
+		length++;
+	return (length);
+}
+
+/**
+ * _strcpy - main fn
+ * @dest: - param 1
+ * @src: - param 2
+ *
+ * Return: - return 0
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i]; i++)
+		dest[i] = src[i];
+
+	dest[i] = '\0';
+
+	return (dest);
+}
+
 /**
  * new_dog - main fn
  * @name: - name of the dog
@@ -14,26 +51,38 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *nw_Dog = (dog_t *)malloc(sizeof(dog_t));
+	dog_t *nw_Dog;
 
-	if (nw_Dog == NULL)
+	if (name == NULL || age < 0 || owner == NULL)
 	{
 		return (NULL);
 	}
 
-	nw_Dog->name = strdup(name);
-	nw_Dog->owner = strdup(owner);
+	nw_Dog = malloc(sizeof(dog_t));
 
-	if (nw_Dog->name == NULL || nw_Dog->owner == NULL)
+	if (nw_Dog == NULL)
+		return (NULL);
+
+	nw_Dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
+
+	if (nw_Dog->name == NULL)
 	{
-		free(nw_Dog->name);
-		free(nw_Dog->owner);
 		free(nw_Dog);
 
 		return (NULL);
 	}
 
+	nw_Dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (nw_Dog->owner == NULL)
+	{
+		free(nw_Dog->name);
+		free(nw_Dog);
+		return (NULL);
+	}
+
+	nw_Dog->name = _strcpy(nw_Dog->name, name);
 	nw_Dog->age = age;
+	nw_Dog->owner = _strcpy(nw_Dog->owner, owner);
 
 	return (nw_Dog);
 }
