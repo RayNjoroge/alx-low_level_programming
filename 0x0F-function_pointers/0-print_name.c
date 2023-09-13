@@ -8,7 +8,7 @@
  * @name: - pointer to the name
  * @f: - pointer to function
  *
- * Return: - return 0
+ * Return: Nothing.
  */
 void print_name(char *name, void (*f)(char *))
 {
