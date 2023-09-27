@@ -1,9 +1,11 @@
 /*include header file(s) containing necessary dependencies*/
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
  * delete_nodeint_at_index - function that deletes the node
- *                              at index index of a listint_t linked list
+ *				at index index of a listint_t linked list
  * @head: - double pointer to head node
  * @index: - position of node to be deleted
  * Return: - returns 1 if it succeeds & -1 if it failed
