@@ -1,4 +1,6 @@
 /*include header file(s) containing necessary dependencies*/
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
