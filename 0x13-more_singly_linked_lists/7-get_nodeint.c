@@ -1,4 +1,7 @@
 /*include header file(s) files containing necessary dependencies*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
 #include "lists.h"
 
 /**
@@ -33,4 +36,3 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 
 }
-
